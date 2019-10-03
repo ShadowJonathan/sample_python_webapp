@@ -8,10 +8,9 @@ import dash_bootstrap_components as dbc
 from flask import Flask
 
 # Local imports
-from controllers.router import Router
 from controllers.hello import Hello
+from controllers.router import Router
 from layouts.layouts import Layouts
-
 
 # App variables
 debug = os.getenv('DEBUG')

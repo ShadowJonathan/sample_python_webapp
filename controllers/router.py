@@ -3,14 +3,14 @@ from dash import Dash
 from dash.dependencies import Input, Output
 
 # Local imports
-from layouts.layouts import Layouts
 from data.session import Session
+from layouts.layouts import Layouts
 
 
-class Router():
-    '''
+class Router:
+    """
     Dash Router
-    '''
+    """
 
     def __init__(self, app: Dash):
         @app.callback(
@@ -24,12 +24,12 @@ class Router():
             )]
         )
         def redirect(pathname):
-            '''
+            """
             Takes in one arguement(s);
             - <pathname>:   (str)   the url pathname to redirect to
 
             Returns a layout_page matching requested pathname.
-            '''
+            """
             if pathname == '/':
                 Session['page'] = '/'
                 return Layouts.index()

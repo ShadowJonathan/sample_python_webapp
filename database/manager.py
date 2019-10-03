@@ -2,36 +2,24 @@
 import os
 
 # Third-party imports
-from orator import DatabaseManager
-from orator import Model
+from orator import DatabaseManager, Model
 
 # Importing local models
-from database.models import posts
-from database.models import drafts
-from database.models import users
-from database.models import notes
+from database.models import drafts, notes, posts, users
 
 
 class Database:
-
     db = None
-    config = {}
 
-    Posts = None
-    Drafts = None
-    Users = None
-    Notes = None
+    Posts = posts
+    Drafts = drafts
+    Users = users
+    Notes = notes
 
     # Config
     config = {}
 
     def __init__(self):
-        # Bind Models to local variables
-        self.Posts = posts
-        self.Drafts = drafts
-        self.Users = users
-        self.Notes = notes
-
         # Set config
         self.config = {
             'mysql': {

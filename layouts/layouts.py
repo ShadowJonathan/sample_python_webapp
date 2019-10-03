@@ -6,14 +6,15 @@ from dash_bootstrap_components import Container, Row, Col
 
 
 class Layouts:
-    '''
+    """
     Contains all default layouts for the application as callable functions.
-    '''
+    """
 
+    @staticmethod
     def base() -> Div:
-        '''
+        """
         Returns a dash website base
-        '''
+        """
         return Div([
             Location(id='url', refresh=False),
             external_link(
@@ -23,10 +24,11 @@ class Layouts:
             Div(id='page_content')
         ])
 
+    @staticmethod
     def index() -> Div:
-        '''
+        """
         Returns the app index page
-        '''
+        """
         return Container([
             Row([
                 Col([
@@ -40,10 +42,11 @@ class Layouts:
             ])
         ])
 
+    @staticmethod
     def not_found() -> Div:
-        '''
+        """
         Returns the 404 page not found page
-        '''
+        """
         return Container([
             Row([
                 Col([
@@ -53,10 +56,11 @@ class Layouts:
             ])
         ])
 
+    @staticmethod
     def hello() -> Div:
-        '''
+        """
         Returns the hello page
-        '''
+        """
         return Container([
             Row([
                 Col([
